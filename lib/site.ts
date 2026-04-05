@@ -1,0 +1,36 @@
+export const siteConfig = {
+  name: "Worsthorne Dental Clinic",
+  shortName: "Worsthorne Dental",
+  description:
+    "Premium dental care in Lancashire for patients across Burnley, Blackburn, Preston, Manchester, and North West England.",
+  url: "https://www.worsthornedentalpractice.co.uk",
+  email: "hello@worsthornedentalpractice.co.uk",
+  telephone: "+44 1282 458340",
+  areaServed: [
+    "Worsthorne",
+    "Burnley",
+    "Blackburn",
+    "Preston",
+    "Manchester",
+    "Bolton",
+    "Wigan",
+    "Liverpool",
+    "Chester",
+    "Lancashire",
+    "Greater Manchester",
+    "Merseyside",
+    "Cheshire",
+    "North West England",
+  ],
+  address: {
+    streetAddress: "93 Lindsay Park, Burnley, Lancs BB10 3SQ ",
+    addressLocality: "Worsthorne",
+    addressRegion: "Lancashire",
+    postalCode: "BB10 3SQ",
+    addressCountry: "GB",
+  },
+  socialLinks: [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/",
+  ],
+};
