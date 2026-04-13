@@ -253,10 +253,20 @@ export function SiteFooter() {
             </Link>
           </div>
         </div>
-
-        <div className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-500">
-          © {new Date().getFullYear()} Worsthorne Dental Clinic. All rights reserved.
-        </div>
+<p className="text-sm text-slate-500 flex flex-wrap items-center gap-x-2">
+  <span>© {new Date().getFullYear()} Worsthorne Dental Clinic</span>
+  <span className="hidden sm:inline">•</span>
+  <span>All rights reserved</span>
+  <span className="hidden sm:inline">•</span>
+  <a
+    href="https://sitora.co.uk"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-slate-700 hover:text-emerald-600 transition"
+  >
+    Site by Sitora
+  </a>
+</p>
       </div>
     </footer>
   );
