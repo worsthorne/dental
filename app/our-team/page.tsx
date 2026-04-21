@@ -16,7 +16,7 @@ export default function OurTeamPage() {
     <main>
       <PageHero
         eyebrow="Our team"
-        title="Experienced clinicians and patient-first professionals."
+        title="Experienced clinicians and patient-first professional."
         description="Meet the people behind the care. Our team is focused on calm communication, high standards, and treatment journeys that feel clear and supportive from beginning to end."
       />
 
