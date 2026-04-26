@@ -10,7 +10,7 @@ export function IntroSection() {
   <div className="relative h-[320px] sm:h-[420px] lg:h-[520px]">
 
     <Image
-      src="/dental-hero.jpg"
+      src="/dental-hero.jpeg"
       alt="Worsthorne Dental Clinic Interior"
       fill
       className="object-cover"

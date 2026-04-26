@@ -43,18 +43,18 @@ export function SiteHeader() {
   href="/"
   className="flex items-center gap-3 shrink-0 transition hover:opacity-90"
 >
-  <div className="relative h-14 w-14 lg:h-16 lg:w-16">
-    <Image
-      src="/logo.png"
-      alt="Worsthorne Dental Clinic"
-      fill
-      className="object-contain"
-      priority
-    />
-  </div>
+ <div className="relative h-28 w-28 sm:h-32 sm:w-32 lg:h-36 lg:w-36">
+  <Image
+    src="/logo.png"
+    alt="Worsthorne Dental Clinic"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
 
   <p className="text-lg font-semibold text-slate-950">
-    Worsthorne Dental Clinic
+    
   </p>
 </Link>
 
