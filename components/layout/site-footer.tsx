@@ -5,25 +5,25 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-slate-200 bg-gradient-to-b from-stone-50 via-white to-stone-100">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-5">
+        <div className="grid gap-12 lg:grid-cols-6">
           <div>
             <Link href="/" className="flex items-center gap-3 transition hover:opacity-90">
               <div className="relative h-12 w-12">
                 <Image
                   src="/logo.png"
-                  alt="Worsthorne Dental Clinic"
+                  alt="Worsthorne Dental Practice"
                   fill
                   className="object-contain"
                 />
               </div>
 
               <p className="text-base font-semibold text-slate-950">
-                Worsthorne Dental Clinic
+                Worsthorne Dental Practice
               </p>
             </Link>
 
             <p className="mt-5 text-sm leading-7 text-slate-600">
-              A premium dental clinic offering advanced treatments, calm patient
+              A premium dental practice offering advanced treatments, calm patient
               experiences, and trusted care across Lancashire and the North West.
             </p>
           </div>
@@ -44,10 +44,10 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/treatments/dental-implants"
+                  href="/smilecare-plan"
                   className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
                 >
-                  Dental Implants
+                  Smilecare Plan
                 </Link>
               </li>
               <li>
@@ -72,6 +72,14 @@ export function SiteFooter() {
                   className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
                 >
                   Teeth Whitening
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/facial-aesthetics"
+                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+                >
+                  Facial Aesthetics
                 </Link>
               </li>
             </ul>
@@ -117,10 +125,10 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="/faqs"
                   className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
                 >
-                  News & Advice
+                  FAQs
                 </Link>
               </li>
               <li>
@@ -129,55 +137,6 @@ export function SiteFooter() {
                   className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
                 >
                   Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
-              Areas We Cover
-            </h3>
-
-            <ul className="mt-5 space-y-3 text-sm text-slate-600">
-              <li>
-                <Link
-                  href="/areas/burnley"
-                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
-                >
-                  Burnley
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/areas/blackburn"
-                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
-                >
-                  Blackburn
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/areas/preston"
-                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
-                >
-                  Preston
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/areas/manchester"
-                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
-                >
-                  Manchester
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/areas/liverpool"
-                  className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
-                >
-                  Liverpool
                 </Link>
               </li>
             </ul>
@@ -206,20 +165,11 @@ export function SiteFooter() {
                   Email
                 </p>
                 <a
-                  href="mailto:hello@worsthornedentalclinic.co.uk"
+                  href="mailto:worsthornedental@hotmail.com"
                   className="break-words font-semibold text-slate-900 transition hover:text-emerald-700"
                 >
-                  hello@worsthornedentalclinic.co.uk
+                  worsthornedental@hotmail.com
                 </a>
-              </div>
-
-              <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-md transition hover:shadow-lg">
-                <p className="text-[10px] uppercase tracking-wide text-slate-500">
-                  Location
-                </p>
-                <p className="font-semibold text-slate-900">
-                  Worsthorne, Lancashire
-                </p>
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-md transition hover:shadow-lg">
@@ -227,9 +177,70 @@ export function SiteFooter() {
                   Hours
                 </p>
                 <p className="font-semibold text-slate-900">
-                  Mon–Thur: 8:30am – 5:30pm
+                  Mon–Thur: 9:00am – 6:00pm
                 </p>
               </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
+              Out-of-Hours
+            </h3>
+
+            <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-5 shadow-md transition hover:shadow-lg">
+              <p className="text-[10px] uppercase tracking-wide text-emerald-700">
+                Emergency Line
+              </p>
+              <a
+                href="tel:07432673069"
+                className="mt-1 block text-lg font-semibold text-slate-900 transition hover:text-emerald-700"
+              >
+                07432 673069
+              </a>
+
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                For urgent dental pain, call the emergency line to see a nearby
+                dentist in East Lancashire.
+              </p>
+
+              <div className="mt-4 space-y-2 text-sm text-slate-700">
+                <p>Friday: 18:00 – 20:00</p>
+                <p>Saturday &amp; Sunday: 10:00 – 17:00</p>
+                <p>Bank Holidays: 10:00 – 17:00</p>
+                <p>Christmas Eve / New Year&apos;s Eve: 18:00 – 20:00</p>
+              </div>
+
+              <p className="mt-4 text-[11px] leading-5 text-slate-500">
+                Fees are set by the attending dentist and are not covered for
+                Smilecare Plan patients.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
+              Visit Us
+            </h3>
+
+            <div className="mt-5 rounded-2xl border border-slate-200 bg-white px-5 py-5 shadow-md transition hover:shadow-lg">
+              <p className="text-[10px] uppercase tracking-wide text-slate-500">
+                Address
+              </p>
+              <p className="mt-1 font-semibold text-slate-900">
+                93 Lindsay Park,
+                <br />
+                Burnley BB10 3SQ
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=93+Lindsay+Park,+Burnley+BB10+3SQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>
@@ -253,20 +264,21 @@ export function SiteFooter() {
             </Link>
           </div>
         </div>
-<p className="text-sm text-slate-500 flex flex-wrap items-center gap-x-2">
-  <span>© {new Date().getFullYear()} Worsthorne Dental Clinic</span>
-  <span className="hidden sm:inline">•</span>
-  <span>All rights reserved</span>
-  <span className="hidden sm:inline">•</span>
-  <a
-    href="https://sitora.co.uk"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-medium text-slate-700 hover:text-emerald-600 transition"
-  >
-    Site by Sitora
-  </a>
-</p>
+
+        <p className="mt-8 flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+          <span>© {new Date().getFullYear()} Worsthorne Dental Clinic</span>
+          <span className="hidden sm:inline">•</span>
+          <span>All rights reserved</span>
+          <span className="hidden sm:inline">•</span>
+          <a
+            href="https://sitora.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-slate-700 transition hover:text-emerald-600"
+          >
+            Site by Sitora
+          </a>
+        </p>
       </div>
     </footer>
   );

@@ -1,37 +1,74 @@
+import Image from "next/image";
 import Link from "next/link";
-import { SectionHeading } from "@/components/shared/section-heading";
 import { teamMembers } from "@/lib/data/team";
 
 export function TeamPreview() {
+  const featuredMembers = teamMembers.slice(0, 2);
+
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <SectionHeading
-          eyebrow="Our team"
-          title="The people behind the care matter just as much as the treatments."
-        />
+    <section className="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#355b46]">
+            Meet the team
+          </p>
+          <h2 className="mt-3 font-serif text-3xl tracking-tight text-slate-950 sm:text-4xl">
+            Experienced, supportive care from a team that puts patients first
+          </h2>
+          <p className="mt-5 text-base leading-8 text-slate-600">
+            Our practice combines clinical skill with a calm, thoughtful approach
+            to patient care. Meet key members of the team and explore the people
+            behind Worsthorne Dental Practice.
+          </p>
+        </div>
 
-        <Link href="/our-team" className="text-sm font-semibold text-emerald-700">
-          View Full Team →
-        </Link>
-      </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {featuredMembers.map((member, index) => (
+            <article
+              key={member.name}
+              className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="relative h-72 w-full sm:h-80">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain bg-white"
+                />
+              </div>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {teamMembers.map((member) => (
-          <div
-            key={member.name}
-            className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
-          >
-            <div className="mb-6 h-64 rounded-[1.5rem] bg-[linear-gradient(145deg,#ecfdf5,#f8fafc,#e2e8f0)]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">
-              {member.role}
-            </p>
-            <h3 className="mt-3 text-2xl font-semibold text-slate-950">
-              {member.name}
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">{member.bio}</p>
-          </div>
-        ))}
+              <div className="p-6 sm:p-7">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#355b46]">
+                  {index === 0 ? "Clinical leadership" : "Patient care"}
+                </p>
+
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+                  {member.name}
+                </h3>
+
+                <p className="mt-2 text-sm font-medium text-slate-700">
+                  {member.role}
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                  {member.bio}
+                </p>
+
+                <div className="mt-6 flex gap-3">
+                 
+
+                  <Link
+                    href="/our-team"
+                    className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-50"
+                  >
+                    View full team
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

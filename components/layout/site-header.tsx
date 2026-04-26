@@ -8,7 +8,8 @@ import Image from "next/image";
 
 const treatmentLinks = [
   { label: "Family Dentistry", href: "/treatments/family-dentistry" },
-  { label: "Dental Implants", href: "/treatments/dental-implants" },
+  { label: "Facial Esthetics", href: "/treatments/facial-esthetics" },
+  { label: "Hygiene Plan", href: "/treatments/hygiene-treatment" },
   { label: "Orthodontics", href: "/treatments/orthodontics" },
   { label: "Cosmetic Dentistry", href: "/treatments/cosmetic-dentistry" },
   { label: "Periodontal Treatment", href: "/treatments/periodontal-treatment" },
@@ -18,13 +19,21 @@ const treatmentLinks = [
 
 const mainLinks = [
   { label: "Home", href: "/" },
-  { label: "Our Team", href: "/our-team" },
-  { label: "Treatments", href: "/treatments" },
-  { label: "Areas", href: "/areas" },
-  { label: "Fees", href: "/fees" },
-  { label: "Contact", href: "/contact" },
-  { label: "News", href: "/news" },
+
+ { label: "Treatments", href: "/treatments" },
+ 
+ { label: "Our Team", href: "/our-team" },
+ 
+ { label: "Fees", href: "/fees" },
+
+{ label: "Facial Aesthetics", href: "/facial-aesthetics" },
+
+  
+  { label: "Smilecare Plan", href: "/smilecare-plan" },
   { label: "Testimonials", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
+  { label: "Faq", href: "/faq" },
+  
 ];
 
 function isActive(pathname: string, href: string) {

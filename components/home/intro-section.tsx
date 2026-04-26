@@ -41,7 +41,7 @@ export function IntroSection() {
           </p>
 
           <p className="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-            You can explore our <InternalLink href="/treatments/dental-implants">dental implants</InternalLink>,{" "}
+            You can explore our <InternalLink href="/treatments/hygiene-treatment">hygiene treatment and care plan”</InternalLink>,{" "}
             <InternalLink href="/treatments/teeth-whitening">teeth whitening</InternalLink>,{" "}
             <InternalLink href="/treatments/cosmetic-dentistry">cosmetic dentistry</InternalLink>, and{" "}
             <InternalLink href="/treatments/family-dentistry">family dentistry</InternalLink> pages,

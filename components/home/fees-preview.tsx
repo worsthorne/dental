@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 const items = [
   ["Consultation", "From £95"],
   ["Teeth Whitening", "From £349"],
-  ["Dental Implants", "From £2,400"],
+  ["Dental Hygiene Visit", "From £75"],
   ["Emergency Visit", "From £85"],
 ];
 

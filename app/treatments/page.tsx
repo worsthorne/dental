@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Treatments | Worsthorne Dental Clinic",
   description:
-    "Explore dental treatments at Worsthorne Dental Clinic, including family dentistry, dental implants, orthodontics, cosmetic dentistry, periodontal treatment, teeth whitening, and root canal treatment.",
+    "Explore dental treatments at Worsthorne Dental Clinic, including family dentistry, hygiene plans, orthodontics, cosmetic dentistry, periodontal treatment, teeth whitening, and root canal treatment.",
   path: "/treatments",
 });
 

@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium text-slate-500">Email</p>
                   <p className="mt-1 text-base font-semibold text-slate-900">
-                    hello@worsthornedentalclinic.co.uk
+                    worsthornedental@hotmail.com
                   </p>
                 </div>
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium text-slate-500">Hours</p>
                   <p className="mt-1 text-base font-semibold text-slate-900">
-                    Mon–Thu: 8:30am – 5:30pm
+                    Mon–Thu: 9:00am – 6:00pm
                   </p>
                 </div>
               </div>

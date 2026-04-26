@@ -10,7 +10,7 @@ export function AboutEstablished() {
   <div className="relative h-[320px] sm:h-[420px]">
 
     <Image
-      src="/clinic-interior.webp"
+      src="/worsthorne_building.jpg"
       alt="Worsthorne Dental Clinic Interior"
       fill
       className="object-cover"
@@ -44,8 +44,9 @@ export function AboutEstablished() {
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
-              Worsthorne Dental Clinic has been serving patients since 1998,
-              providing high-quality dental care across Lancashire and the North West.
+             Founded by Dr. John Clavell Bate in 1998 and continued by Dr. Mazhar Iqbal
+in late 2022, Worsthorne Dental Practice provides high-quality dental care across
+Lancashire and the Northwest.
             </p>
 
             <p className="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
@@ -55,9 +56,8 @@ export function AboutEstablished() {
             </p>
 
             <p className="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
-              Our philosophy is simple: treatment should be built around comfort.
-              That means clear communication, a calm environment, and an approach
-              that helps patients feel reassured from the first conversation to the final result.
+             Our philosophy is simple: treatment should be built around comfort and above all,
+patient centred.
             </p>
           </div>
         </Reveal>

@@ -14,17 +14,17 @@ export function HeroSection() {
         <Reveal>
           <div>
             <div className="inline-flex rounded-full border border-emerald-200 bg-white/85 px-4 py-2 text-sm text-emerald-800 shadow-sm backdrop-blur">
-              Trusted care. Beautiful results. Calm experience.
+              Personalised Care. Realistic results. Calm Experience.
             </div>
 
             <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[0.94] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-              Advanced dental treatments with a truly premium feel.
+              Welcome to Worsthorne Dental Practice
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-              A refined private dental experience built around comfort, precision,
-              and confidence. From routine family care to implants, orthodontics,
-              whitening, and cosmetic dentistry, every detail is designed to feel considered.
+              A refined private dental experience built around comfort, precision, and confidence.
+From routine family care to short term orthodontics, whitening, and
+cosmetic dentistry, every detail is designed to feel considered and personalised.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-4 text-sm text-slate-600">
@@ -65,10 +65,11 @@ export function HeroSection() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-emerald-200">
-                    Private Dental Clinic
+                    Private Dental Practice
                   </p>
                   <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
-                    Care that feels expertly designed
+                    Care that feels tailored to your
+personal dental needs.
                   </h2>
                 </div>
 
@@ -80,7 +81,7 @@ export function HeroSection() {
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/20 bg-white/5 p-5 backdrop-blur transition hover:bg-white/10">
                   <p className="text-sm text-white/70">Most requested</p>
-                  <p className="mt-2 text-lg font-semibold">Dental Implants</p>
+                  <p className="mt-2 text-lg font-semibold">Hygiene treatment and care plan</p>
                   <p className="mt-3 text-sm leading-7 text-white/75">
                     Precision-led tooth replacement with lasting function and natural aesthetics.
                   </p>

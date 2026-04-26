@@ -9,10 +9,10 @@ const treatments = [
     image: "/treatments/family.jpg",
   },
   {
-    title: "Dental Implants",
+    title: "Hygiene & Care Plan",
     desc: "A long-term restorative solution focused on confidence, stability, and natural function.",
-    href: "/treatments/dental-implants",
-    image: "/treatments/implants.jpg",
+    href: "/treatments/hygiene-treatment",
+    image: "/treatments/hygiene.jpg",
   },
   {
     title: "Orthodontics",

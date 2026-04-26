@@ -12,8 +12,8 @@ export const treatments: TreatmentItem[] = [
       "Preventive and routine care designed to support healthy smiles through every stage of life.",
   },
   {
-    title: "Dental Implants",
-    slug: "/treatments/dental-implants",
+    title: "Dental Hygiene",
+    slug: "/treatments/hygiene-treatment",
     description:
       "A long-term restorative solution focused on confidence, stability, and natural function.",
   },
