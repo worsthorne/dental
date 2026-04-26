@@ -22,16 +22,16 @@ export default async function ReviewsPage() {
   const data = await fetchGoogleReviews();
 
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
-      <section className="border-b border-neutral-200 bg-gradient-to-b from-rose-50 to-white">
+    <main className="min-h-screen bg-white text-slate-950">
+      <section className="border-b border-black/5 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-rose-700">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#355b46]">
             Reviews
           </p>
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
             Trusted by patients who value calm, premium dental care
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
             Read genuine feedback from patients who have visited Worsthorne Dental
             Clinic. Comfort, communication and quality of care matter, and our
             reviews reflect that.
@@ -42,10 +42,10 @@ export default async function ReviewsPage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         {data ? (
           <>
-            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8 shadow-sm">
+            <div className="rounded-3xl border border-slate-200 bg-[#f4faf4] p-8 shadow-sm">
               <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
                     Google Rating
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold">
@@ -58,7 +58,7 @@ export default async function ReviewsPage() {
                     </span>
                     <div>
                       <Stars rating={data.rating} />
-                      <p className="mt-1 text-sm text-neutral-600">
+                      <p className="mt-1 text-sm text-slate-600">
                         Based on {data.userRatingCount} Google reviews
                       </p>
                     </div>
@@ -72,7 +72,7 @@ export default async function ReviewsPage() {
                         href={data.googleMapsUri}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
+                        className="inline-flex items-center rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
                       >
                         See all reviews on Google
                       </a>
@@ -81,7 +81,7 @@ export default async function ReviewsPage() {
                         href={data.googleMapsUri}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center rounded-full border border-neutral-300 px-5 py-3 text-sm font-medium text-neutral-900 transition hover:bg-white"
+                        className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-950 transition hover:bg-white"
                       >
                         Leave a Google review
                       </a>
@@ -100,7 +100,7 @@ export default async function ReviewsPage() {
                   return (
                     <article
                       key={index}
-                      className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:shadow-md"
+                      className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
                     >
                       <div className="flex items-center gap-4">
                         {review.authorAttribution?.photoUri ? (
@@ -110,7 +110,7 @@ export default async function ReviewsPage() {
                             className="h-12 w-12 rounded-full object-cover"
                           />
                         ) : (
-                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-100 text-sm font-semibold text-rose-700">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8f4e8] text-sm font-semibold text-[#355b46]">
                             {(review.authorAttribution?.displayName || "G")
                               .charAt(0)
                               .toUpperCase()}
@@ -118,10 +118,10 @@ export default async function ReviewsPage() {
                         )}
 
                         <div>
-                          <p className="font-semibold text-neutral-900">
+                          <p className="font-semibold text-slate-900">
                             {review.authorAttribution?.displayName || "Google User"}
                           </p>
-                          <p className="text-sm text-neutral-500">
+                          <p className="text-sm text-slate-500">
                             {review.relativePublishTimeDescription || ""}
                           </p>
                         </div>
@@ -131,23 +131,23 @@ export default async function ReviewsPage() {
                         <Stars rating={review.rating} />
                       </div>
 
-                      <p className="mt-4 text-sm leading-7 text-neutral-700">
+                      <p className="mt-4 text-sm leading-7 text-slate-700">
                         {reviewText}
                       </p>
                     </article>
                   );
                 })
               ) : (
-                <div className="rounded-3xl border border-neutral-200 bg-white p-6">
-                  <p className="text-neutral-600">No reviews available right now.</p>
+                <div className="rounded-3xl border border-slate-200 bg-white p-6">
+                  <p className="text-slate-600">No reviews available right now.</p>
                 </div>
               )}
             </div>
           </>
         ) : (
-          <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8">
+          <div className="rounded-3xl border border-slate-200 bg-[#f4faf4] p-8">
             <h2 className="text-2xl font-semibold">Reviews coming soon</h2>
-            <p className="mt-3 max-w-2xl text-neutral-600">
+            <p className="mt-3 max-w-2xl text-slate-600">
               We could not load Google reviews yet. Please try again shortly.
             </p>
           </div>
