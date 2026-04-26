@@ -52,7 +52,7 @@ export function TeamPreview() {
                 </p>
 
                 <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                  {member.bio}
+                  {member.shortBio}
                 </p>
 
                 <div className="mt-6 flex gap-3">
