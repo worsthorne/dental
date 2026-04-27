@@ -30,38 +30,40 @@ export default function OurTeamPage() {
             >
               <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-[320px]">
-  {member.image ? (
-    <Image
-      src={member.image}
-      alt={member.name}
-      fill
-      sizes="(max-width: 1024px) 100vw, 40vw"
-      className={`${
-        index === 1 ? "object-cover object-top" : "object-cover object-center"
-      }`}
-    />
-  ) : (
-    <div className="flex h-full w-full items-center justify-center bg-[#f4faf4] text-sm font-medium text-slate-500">
-      Team photo coming soon
-    </div>
-  )}
-</div>
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name || "Team member"}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className={`${
+                        index === 1
+                          ? "object-cover object-top"
+                          : "object-cover object-center"
+                      }`}
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-[#f4faf4] text-sm font-medium text-slate-500">
+                      Team photo coming soon
+                    </div>
+                  )}
+                </div>
 
                 <div className="p-6 sm:p-8 lg:p-10">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#355b46]">
-                    {member.role}
+                    {member.role || "Team member"}
                   </p>
 
                   <h2 className="mt-3 font-serif text-3xl tracking-tight text-slate-950 sm:text-4xl">
-                    {member.name}
+                    {member.name || "Team member"}
                   </h2>
 
                   <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-                    {member.qualifications}
+                    {member.qualifications || ""}
                   </p>
 
                   <div className="mt-6 space-y-5 text-base leading-8 text-slate-700">
-                    {member.fullBio.map((paragraph) => (
+                    {(member.fullBio || []).map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
