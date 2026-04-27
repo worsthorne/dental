@@ -6,7 +6,7 @@ export function TeamPreview() {
   const featuredMembers = teamMembers.slice(0, 2);
 
   return (
-    <section className="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
+   <section className="px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8 lg:pt-20 lg:pb-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#355b46]">
@@ -40,7 +40,7 @@ export function TeamPreview() {
 
               <div className="p-6 sm:p-7">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#355b46]">
-                  {index === 0 ? "Clinical leadership" : "Patient care"}
+                  {index === 0 ? "‎BDS BSc (Hons) MFDS RCSEd PGCert ClinTeach" : "Patient care"}
                 </p>
 
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">

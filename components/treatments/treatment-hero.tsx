@@ -1,13 +1,19 @@
+import Image from "next/image";
+
 type TreatmentHeroProps = {
   name: string;
   title: string;
   text: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export function TreatmentHero({
   name,
   title,
   text,
+  image,
+  imageAlt,
 }: TreatmentHeroProps) {
   return (
     <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -44,7 +50,18 @@ export function TreatmentHero({
         </div>
 
         <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_25px_70px_rgba(15,23,42,0.08)] sm:p-8">
-          <div className="h-[360px] rounded-[1.5rem] bg-[linear-gradient(145deg,#d1fae5,#f8fafc,#e2e8f0)]" />
+          <div className="relative h-[360px] overflow-hidden rounded-[1.5rem] bg-[linear-gradient(145deg,#d1fae5,#f8fafc,#e2e8f0)]">
+            {image ? (
+              <Image
+                src={image}
+                alt={imageAlt || title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
+            ) : null}
+          </div>
         </div>
       </div>
     </section>

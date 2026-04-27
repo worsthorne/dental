@@ -36,11 +36,13 @@ export function TreatmentTemplate({ treatment }: TreatmentTemplateProps) {
         />
       </section>
 
-      <TreatmentHero
-        name={treatment.name}
-        title={treatment.heroTitle}
-        text={treatment.heroText}
-      />
+     <TreatmentHero
+  name={treatment.name}
+  title={treatment.heroTitle}
+  text={treatment.heroText}
+  image={treatment.heroImage}
+  imageAlt={treatment.heroImageAlt}
+/>
 
       <TreatmentBenefits items={treatment.benefits} />
 

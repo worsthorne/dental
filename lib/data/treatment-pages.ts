@@ -9,6 +9,8 @@ export type TreatmentPageData = {
   process: string[];
   outcomesTitle: string;
   outcomesText: string;
+  heroImage?: string;
+heroImageAlt?: string;
   faqs: {
     question: string;
     answer: string;
@@ -24,6 +26,8 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Family dentistry with comfort, consistency, and long-term care in mind.",
     heroText:
       "Our family dentistry approach focuses on prevention, reassurance, and a calm patient experience for both routine visits and ongoing oral health support.",
+    heroImage: "/treatments/family-dentistry.jpg",
+    heroImageAlt: "Family dentistry consultation at Worsthorne Dental Practice",
     benefits: [
       "Preventive care built around long-term oral health",
       "A calm and supportive environment for all ages",
@@ -36,9 +40,9 @@ export const treatmentPages: TreatmentPageData[] = [
     ],
     process: [
       "Initial consultation and assessment",
-      "Routine examination and oral health review",
-      "Preventive advice and treatment planning",
-      "Ongoing care with regular follow-up visits",
+      "Receive detailed treatment plan",
+      "Schedule booking for treatment",
+      "Ongoing care with regular follow-up visits- smile care plans available for added support",
     ],
     outcomesTitle: "Trusted routine care that supports confidence over time.",
     outcomesText:
@@ -184,7 +188,9 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Periodontal treatment that protects the foundation of a healthy smile.",
     heroText:
       "Healthy gums are essential for long-term oral health. Periodontal treatment focuses on managing gum concerns early and supporting a stronger foundation for the future.",
-    benefits: [
+      heroImage: "/treatments/periodontal-treatment.jpg",
+    heroImageAlt: "Periodontal treatment at Worsthorne Dental Practice",
+      benefits: [
       "Support healthier gums and oral stability",
       "Protect the foundation of the teeth",
       "Improve comfort and long-term maintenance",
@@ -195,10 +201,10 @@ export const treatmentPages: TreatmentPageData[] = [
       "Anyone advised to seek professional gum treatment",
     ],
     process: [
-      "Assessment of gum health",
-      "Treatment planning and explanation",
-      "Clinical periodontal care",
-      "Ongoing review and maintenance support",
+      "Diagnosis and Radiographic Assessment ",
+      "Full mouth periodontal pocket chart with Plaque & Bleeding Chart",
+      "Root Surface Debridement of affected sextants ",
+      "Three monthly reviews and maintenance support",
     ],
     outcomesTitle: "Stronger gum health and better long-term support for your smile.",
     outcomesText:
@@ -264,7 +270,9 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Root canal treatment delivered with precision, reassurance, and care.",
     heroText:
       "Root canal treatment is about preserving the natural tooth where possible while relieving discomfort and restoring stability with a carefully managed approach.",
-    benefits: [
+    heroImage: "/treatments/root-canal-treatment.jpg",
+    heroImageAlt: "Root canal treatment at Worsthorne Dental Practice",
+      benefits: [
       "Help save the natural tooth",
       "Relieve discomfort and support restoration",
       "Restore function with a planned clinical approach",
@@ -275,10 +283,10 @@ export const treatmentPages: TreatmentPageData[] = [
       "Anyone wanting to preserve a natural tooth where appropriate",
     ],
     process: [
-      "Examination and diagnosis",
-      "Treatment planning and explanation",
-      "Root canal procedure",
-      "Restoration and follow-up care",
+      "Pulp Extirpation- this is when we remove the infected pulp inside your tooth which all alleviate pain",
+      "Medicine is placed inside the root canal to kill off all the bacteria and sterilise the tooth",
+      "The root canal system is then filled to prevent further bacteria accumulating and causing harm",
+      "If necessary, then a crown is placed for a complete seal and structural support",
     ],
     outcomesTitle: "A more comfortable, stable result with the aim of preserving the tooth.",
     outcomesText:

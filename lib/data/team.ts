@@ -1,7 +1,6 @@
 export const teamMembers = [
   {
     slug: "dr-mazhar-iqbal",
-    name: "Dr. Mazhar Iqbal (Maz)",
     role: "Principal Dentist",
     qualifications:
       "Bachelor of Medical Science, UCLan School of Medicine & Dentistry graduate, Postgraduate Certificate in Clinical Teaching",
