@@ -108,7 +108,9 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Orthodontic treatment designed for straighter smiles and better balance.",
     heroText:
       "Orthodontics can improve both smile aesthetics and alignment, helping patients feel more confident while supporting overall oral function.",
-    benefits: [
+   heroImage: "/treatments/orthodontics.jpg",
+heroImageAlt: "Orthodontic consultation at Worsthorne Dental Practice",
+      benefits: [
       "Improve smile alignment and symmetry",
       "Support better bite function",
       "Create a more balanced appearance",
@@ -148,7 +150,9 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Cosmetic dentistry with elegance, subtlety, and beautifully considered results.",
     heroText:
       "Cosmetic dentistry should feel refined rather than overdone. Our approach focuses on balance, confidence, and results that still look natural.",
-    benefits: [
+    heroImage: "/treatments/cosmetic-dentistry.jpg",
+heroImageAlt: "Cosmetic dentistry consultation at Worsthorne Dental Practice",
+      benefits: [
       "Enhance the brightness and balance of your smile",
       "Improve confidence with natural-looking results",
       "Tailor treatment to your features and goals",
@@ -230,7 +234,9 @@ export const treatmentPages: TreatmentPageData[] = [
     heroTitle: "Professional teeth whitening for a cleaner, brighter, more confident smile.",
     heroText:
       "Teeth whitening is one of the most effective ways to refresh a smile. Professional treatment is designed to deliver clearer, more reliable results than guesswork at home.",
-    benefits: [
+  heroImage: "/treatments/teeth-whitening.jpg",
+heroImageAlt: "Teeth whitening consultation at Worsthorne Dental Practice",
+      benefits: [
       "Brighten the smile safely and effectively",
       "Refresh your appearance with minimal disruption",
       "Achieve more reliable results than many over-the-counter options",
