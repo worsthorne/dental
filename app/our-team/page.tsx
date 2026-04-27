@@ -30,16 +30,22 @@ export default function OurTeamPage() {
             >
               <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-[320px]">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className={`${
-                      index === 1 ? "object-cover object-top" : "object-cover object-center"
-                    }`}
-                  />
-                </div>
+  {member.image ? (
+    <Image
+      src={member.image}
+      alt={member.name}
+      fill
+      sizes="(max-width: 1024px) 100vw, 40vw"
+      className={`${
+        index === 1 ? "object-cover object-top" : "object-cover object-center"
+      }`}
+    />
+  ) : (
+    <div className="flex h-full w-full items-center justify-center bg-[#f4faf4] text-sm font-medium text-slate-500">
+      Team photo coming soon
+    </div>
+  )}
+</div>
 
                 <div className="p-6 sm:p-8 lg:p-10">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#355b46]">
