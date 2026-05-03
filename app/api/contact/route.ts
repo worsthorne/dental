@@ -11,7 +11,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "Dental Clinic <onboarding@resend.dev>",
-      to: ["worsthornedental@gmail.com"], // 🔥 CHANGE THIS
+      to: ["worsthornedental@hotmail.com"], // 🔥 CHANGE THIS
       subject: "New Appointment Request",
       html: `
         <h2>New Appointment Request</h2>
