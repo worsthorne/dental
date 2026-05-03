@@ -28,7 +28,7 @@ export const teamMembers = [
     fullBio: [
       "Victoria brings over 20 years of experience as a Dental Hygienist, with a strong focus on patient care and prevention. She helps patients maintain excellent oral health through a caring and thorough approach.",
       "Known for her friendly and approachable manner, Victoria strives to make every visit a positive and comfortable experience.",
-      "At the practice, Victoria offers a wide range of treatments including non-surgical periodontal treatment, professional tooth whitening, and Diamond Airflow polishing to remove stubborn stains and leave teeth feeling brighter and smoother.",
+      "At the practice, Victoria offers a wide range of treatments including non-surgical periodontal treatment, professional tooth whitening, and Diamond Airflow polishing to remove stubborn stains leaving teeth feeling brighter and smoother.",
       "She is also qualified to provide advanced medically led facial aesthetics to help rejuvenate and reduce fine lines to the face and neck.",
       "Outside work, Victoria is a busy mum of two who enjoys staying active and embracing new challenges. She loves the outdoors and has climbed many mountains, with Ben Nevis being her highest peak to date. In her spare time, she also enjoys paddle boarding, musical theatre, running, and exploring new places to eat.",
     ],
