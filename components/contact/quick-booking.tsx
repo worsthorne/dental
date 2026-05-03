@@ -1,98 +1,107 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export function QuickBooking() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("idle");
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("sending");
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName: name,
-          email: "quickbooking@worsthornedentalclinic.co.uk",
-          phone,
-          message: "Quick booking request submitted from homepage hero section.",
-        }),
-      });
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-      if (!res.ok) {
-        throw new Error("Failed to send enquiry");
-      }
+    const payload = {
+      fullName: String(formData.get("fullName") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+    };
 
-      setStatus("success");
-      setName("");
-      setPhone("");
-    } catch {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
       setStatus("error");
-    } finally {
-      setLoading(false);
+      return;
     }
+
+    form.reset();
+    setStatus("success");
   }
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur"
+      className="mt-6 rounded-[2rem] border border-white/15 bg-white/5 p-5 shadow-2xl backdrop-blur"
     >
-      <p className="text-sm font-medium text-white/75">Quick booking</p>
+      <p className="text-sm font-semibold text-white">Quick booking</p>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="rounded-xl border border-white/10 bg-white/90 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:ring-2 focus:ring-emerald-400/70"
-          placeholder="Your name"
+          name="fullName"
+          type="text"
           required
+          placeholder="Your name"
+          className="h-12 rounded-2xl border border-white/15 bg-white px-4 text-sm text-slate-950 outline-none placeholder:text-slate-500"
         />
 
         <input
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="rounded-xl border border-white/10 bg-white/90 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:ring-2 focus:ring-emerald-400/70"
+          name="phone"
+          type="tel"
           placeholder="Phone number"
+          className="h-12 rounded-2xl border border-white/15 bg-white px-4 text-sm text-slate-950 outline-none placeholder:text-slate-500"
+        />
+
+        <input
+          name="email"
+          type="email"
           required
+          placeholder="Email address"
+          className="h-12 rounded-2xl border border-white/15 bg-white px-4 text-sm text-slate-950 outline-none placeholder:text-slate-500 sm:col-span-2"
+        />
+
+        <textarea
+          name="message"
+          required
+          rows={3}
+          placeholder="How can we help?"
+          className="rounded-2xl border border-white/15 bg-white px-4 py-3 text-sm text-slate-950 outline-none placeholder:text-slate-500 sm:col-span-2"
         />
       </div>
 
       <button
         type="submit"
-        disabled={loading}
-        className="mt-4 w-full rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-emerald-50 disabled:cursor-not-allowed disabled:opacity-70"
+        disabled={status === "sending"}
+        className="mt-4 h-12 w-full rounded-full bg-white text-sm font-semibold text-slate-950 shadow-lg transition hover:bg-slate-100 disabled:opacity-70"
       >
-        {loading ? "Sending..." : "Request Appointment"}
+        {status === "sending" ? "Sending..." : "Request Appointment"}
       </button>
 
-      <p className="mt-3 text-center text-xs text-white/55">
-        Prefer the full form?{" "}
-        <Link href="/contact" className="underline underline-offset-4">
-          Go to contact page
-        </Link>
-      </p>
-
       {status === "success" && (
-        <p className="mt-3 text-sm text-emerald-300">
-          Request sent. We’ll contact you shortly.
+        <p className="mt-3 text-sm text-white/80">
+          Thank you. Your enquiry has been sent.
         </p>
       )}
 
       {status === "error" && (
-        <p className="mt-3 text-sm text-red-300">
+        <p className="mt-3 text-sm text-red-200">
           Something went wrong. Please try again.
         </p>
       )}
+
+      <p className="mt-3 text-center text-xs text-white/60">
+        Prefer the full form?{" "}
+        <a href="/contact" className="font-medium text-white underline underline-offset-4">
+          Go to contact page
+        </a>
+      </p>
     </form>
   );
 }

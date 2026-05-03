@@ -7,7 +7,7 @@ export function MobileBookingBar() {
         href="/contact"
         className="inline-flex w-full items-center justify-center rounded-full bg-slate-950 px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(15,23,42,0.28)] backdrop-blur"
       >
-        Book Appointment
+        Book Now
       </Link>
     </div>
   );

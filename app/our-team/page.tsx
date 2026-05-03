@@ -33,7 +33,7 @@ export default function OurTeamPage() {
                   {member.image ? (
                     <Image
                       src={member.image}
-                      alt={member.name || "Team member"}
+                      alt={member.name || "BDS BSc (Hons) MFDS RCSEd PGCert ClinTeach"}
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className={`${
@@ -55,7 +55,7 @@ export default function OurTeamPage() {
                   </p>
 
                   <h2 className="mt-3 font-serif text-3xl tracking-tight text-slate-950 sm:text-4xl">
-                    {member.name || "Team member"}
+                    {member.name || "Dr Mazhar Iqbal BDS BSc (Hons) MFDS RCSEd PGCert ClinTeach"}
                   </h2>
 
                   <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">

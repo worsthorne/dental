@@ -32,7 +32,7 @@ export function TeamPreview() {
                 {member.image ? (
                   <Image
                     src={member.image}
-                    alt={member.name || "Team member"}
+                    alt={member.name || "Dr Mazhar Iqbal BDS BSc (Hons) MFDS RCSEd PGCert ClinTeach"}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain bg-white"

@@ -208,6 +208,16 @@ export default function FacialAestheticsPage() {
                   </span>
                 </div>
               </div>
+              <div className="rounded-2xl border border-slate-200 bg-white px-5 py-5">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-sm font-medium text-slate-700">
+                    Platysma Bands
+                  </span>
+                  <span className="text-sm font-semibold text-slate-950">
+                    From £300
+                  </span>
+                </div>
+              </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white px-5 py-5">
                 <div className="flex items-center justify-between gap-4">
@@ -217,7 +227,8 @@ export default function FacialAestheticsPage() {
                   <span className="text-sm font-semibold text-slate-950">
                     From £200
                   </span>
-                </div>
+                  
+              </div>
                 <p className="mt-3 text-sm leading-7 text-slate-500">
                   Includes complimentary top-up if required.
                 </p>

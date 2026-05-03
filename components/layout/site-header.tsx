@@ -107,8 +107,8 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <div className="hidden sm:block">
-          <PremiumButton href="/contact">Book Appointment</PremiumButton>
+        <div className="ml-3 whitespace-nowrap rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#22352b]">
+          <PremiumButton href="/contact">Book Now</PremiumButton>
         </div>
 
         <button

@@ -56,7 +56,7 @@ export const teamMembers = [
 },
 {
   slug: "shanon-pervaiz",
-  name: "Miss Shanon Pervaiz",
+  name: "Miss Shanon Perviaz",
   role: "Dental Nurse",
   qualifications: "Front-of-house and patient support with a focus on clear communication and a smooth patient journey",
   shortBio:
