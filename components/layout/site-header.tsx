@@ -27,7 +27,7 @@ const mainLinks = [
   { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
    { label: "Out of Hours", href: "/out-of-hours" },
-  { label: "FAQs", href: "/faqs" },
+  { label: "FAQs", href: "/faq" },
 ];
 
 function isActive(pathname: string, href: string) {
