@@ -29,7 +29,7 @@ export default function OurTeamPage() {
               className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
             >
               <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-[320px]">
+                <div className="relative min-h-[320px] bg-slate-100">
                   {member.image ? (
                     <Image
                       src={member.image}
@@ -38,8 +38,8 @@ export default function OurTeamPage() {
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className={`${
                         index === 1
-                          ? "object-cover object-top"
-                          : "object-cover object-center"
+                          ? "object-contain object-top"
+                          : "object-contain object-center"
                       }`}
                     />
                   ) : (
