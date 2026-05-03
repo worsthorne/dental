@@ -50,7 +50,7 @@ export const teamMembers = [
     "Her calm approach and attention to detail help create a welcoming experience for both new and returning patients.",
     "Keira splits her time between dental nursing and as an equine sports massage therapist. When she not working she enjoys spending time walking her two dogs, riding her horse and sailing.",
   ],
-  image: "/team/keira-fell.jpeg",
+  image: "/team/keira-fell.jpg",
   href: "/our-team#keira-fell",
   category: "support",
 },
