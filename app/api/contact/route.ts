@@ -9,18 +9,18 @@ export async function POST(req: Request) {
 
     const { name, email, phone, message } = body;
 
-    const data = await resend.emails.send({
-      from: "Dental Clinic <onboarding@resend.dev>",
-      to: ["worsthornedental@hotmail.com"], // 🔥 CHANGE THIS
-      subject: "New Appointment Request",
-      html: `
-        <h2>New Appointment Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    });
+   const data = await resend.emails.send({
+  from: process.env.CONTACT_FROM_EMAIL || "Dental Clinic <onboarding@resend.dev>",
+  to: [process.env.CONTACT_TO_EMAIL || "worsthornedental@hotmail.com"],
+  subject: "New Appointment Request",
+  html: `
+    <h2>New Appointment Request</h2>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone:</strong> ${phone}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  `,
+});
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
