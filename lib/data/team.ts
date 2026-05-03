@@ -68,7 +68,7 @@ export const teamMembers = [
     "Her role helps connect the clinical and front-of-house sides of the practice, ensuring patients receive both practical guidance and a warm welcome.",
     "When Shannon is not working, she enjoys travelling, spending time with family and friends, and going to the gym, always aiming to live life to the fullest.",
   ],
-  image: "/team/shanon-pervaiz.jpg",
+  image: "/team/shanon-pervaiz.jpeg",
   href: "/our-team#shanon-pervaiz",
   category: "support",
 },
