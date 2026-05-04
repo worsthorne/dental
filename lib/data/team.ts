@@ -55,16 +55,16 @@ export const teamMembers = [
   category: "support",
 },
 {
-  slug: "shanon-pervaiz",
-  name: "Miss Shanon Perviaz",
+  slug: "shannon-pervaiz",
+  name: "Miss Shannon Perviaz",
   role: "Dental Nurse",
   qualifications: "Front-of-house and patient support with a focus on clear communication and a smooth patient journey",
   shortBio:
-    "Shanon helps patients feel welcomed and well guided from first contact, supporting appointments, communication, and a calm practice experience.",
+    "Shannon helps patients feel welcomed and well guided from first contact, supporting appointments, communication, and a calm practice experience.",
   fullBio: [
-    "Shanon is often one of the first people patients speak to when contacting the practice and plays a key role in creating a positive first impression.",
+    "Shannon is often one of the first people patients speak to when contacting the practice and plays a key role in creating a positive first impression.",
     "She supports patients with appointments, enquiries, and day-to-day communication, helping the patient journey feel straightforward and well organised.",
-    "Known for her friendly and approachable manner, Shanon enjoys helping patients feel listened to and supported at every stage of their care.",
+    "Known for her friendly and approachable manner, Shannon enjoys helping patients feel listened to and supported at every stage of their care.",
     "Her role helps connect the clinical and front-of-house sides of the practice, ensuring patients receive both practical guidance and a warm welcome.",
     "When Shannon is not working, she enjoys travelling, spending time with family and friends, and going to the gym, always aiming to live life to the fullest.",
   ],

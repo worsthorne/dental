@@ -85,8 +85,8 @@ const feeSections = [
   {
     title: "Children (0–16 years)",
     rows: [
-      ["Routine dental exam with topical fluoride application", "£30"],
-      ["Dental radiography", "£30"],
+      ["Routine dental exam with topical fluoride application", "£55"],
+      ["Dental radiography", "£65"],
       ["Deciduous tooth restoration", "£50"],
       ["Deciduous tooth extraction", "£100"],
       ["Orthodontic assessment and referral", "FREE"],
