@@ -3,8 +3,8 @@ export const siteConfig = {
   shortName: "Worsthorne Dental",
   description:
     "Premium dental care in Lancashire for patients across Burnley, Blackburn, Preston, Manchester, and North West England.",
-  url: "https://www.worsthornedentalpractice.co.uk",
-  email: "hello@worsthornedentalpractice.co.uk",
+  url: "https://www.worsthornedentalpractice.com",
+  email: "admin@worsthornedentalpractice.com",
   telephone: "+44 1282 458340",
   areaServed: [
     "Worsthorne",
