@@ -195,7 +195,34 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
+<div className="mt-14 flex justify-start">
+  <a
+    href="https://www.instagram.com/worsthorne.dentalpractice?igsh=MWFvYW1jYTFndGcwZA%3D%3D&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit Worsthorne Dental Clinic on Instagram"
+    className="group inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-md transition hover:-translate-y-0.5 hover:border-emerald-200 hover:text-emerald-700 hover:shadow-lg"
+  >
+    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950 text-white transition group-hover:bg-emerald-700">
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        className="h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+      </svg>
+    </span>
 
+    <span>Visit our Instagram page</span>
+  </a>
+</div>
         <div className="mt-16 rounded-[2rem] bg-gradient-to-r from-slate-950 to-slate-800 px-6 py-10 text-white sm:px-10">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
