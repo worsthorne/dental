@@ -11,9 +11,11 @@ import { NewsPreview } from "@/components/home/news-preview";
 import { BookingCta } from "@/components/home/booking-cta";
 import { AboutEstablished } from "@/components/home/about-established";
 import { TrustStats } from "@/components/home/trust-stats";
+import { EntryGate } from "@/components/entry-gate";
 export default function HomePage() {
   return (
     <main>
+      <EntryGate />
       <HeroSection />
       <TrustStrip />
       <IntroSection />
