@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export function SiteFooter() {
   return (
@@ -195,34 +194,108 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
-<div className="mt-14 flex justify-start">
-  <a
-    href="https://www.instagram.com/worsthorne.dentalpractice?igsh=MWFvYW1jYTFndGcwZA%3D%3D&utm_source=qr"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit Worsthorne Dental Clinic on Instagram"
-    className="group inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-md transition hover:-translate-y-0.5 hover:border-emerald-200 hover:text-emerald-700 hover:shadow-lg"
-  >
-    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950 text-white transition group-hover:bg-emerald-700">
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        className="h-5 w-5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
-      </svg>
-    </span>
 
-    <span>Visit our Instagram page</span>
-  </a>
-</div>
+        <div className="mt-14 rounded-3xl border border-slate-200 bg-white p-6 shadow-md sm:p-8">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
+            Legal & Compliance
+          </h3>
+
+          <div className="mt-5 grid gap-3 text-sm text-slate-600 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/gdc-compliance"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              GDC Compliance
+            </Link>
+
+            <Link
+              href="/complaints-procedure"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Complaints Procedure
+            </Link>
+
+            <Link
+              href="/patient-information"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Patient Information
+            </Link>
+
+            <Link
+              href="/privacy-policy"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/cookie-policy"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Cookie Policy
+            </Link>
+
+            <Link
+              href="/accessibility"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Accessibility
+            </Link>
+
+            <Link
+              href="/terms"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              Terms of Use
+            </Link>
+
+            <a
+              href="https://www.gdc-uk.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex transition hover:translate-x-0.5 hover:text-emerald-700"
+            >
+              General Dental Council
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-10 flex justify-start">
+          <a
+            href="https://www.instagram.com/worsthorne.dentalpractice?igsh=MWFvYW1jYTFndGcwZA%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Worsthorne Dental Clinic on Instagram"
+            className="group inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-md transition hover:-translate-y-0.5 hover:border-emerald-200 hover:text-emerald-700 hover:shadow-lg"
+          >
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950 text-white transition group-hover:bg-emerald-700">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="0.8"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </span>
+
+            <span>Visit our Instagram page</span>
+          </a>
+        </div>
+
         <div className="mt-16 rounded-[2rem] bg-gradient-to-r from-slate-950 to-slate-800 px-6 py-10 text-white sm:px-10">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -243,7 +316,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="mt-8 flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+        <p className="mt-8 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm text-slate-500">
           <span>© {new Date().getFullYear()} Worsthorne Dental Clinic</span>
           <span className="hidden sm:inline">•</span>
           <span>All rights reserved</span>
