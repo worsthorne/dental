@@ -5,13 +5,13 @@ const dentalTeam = [
     name: "Dr Mazhar Iqbal",
     role: "Principal Dentist",
     gdcNumber: "251232",
-    qualifications: "DS BSc (Hons) MFDS RCSEd PGCert ClinTeach",
+    qualifications: "BDS BSc (Hons) MFDS RCSEd PGCert ClinTeach",
   },
   {
     name: "Victoria Bond",
     role: "Dental Hygienist",
     gdcNumber: "102889",
-    qualifications: "BSc (Hons) Dental Hygiene",
+    qualifications: "RDH Dental Hygiene",
   },
   {
     name: "Shannon Perviaz",
@@ -66,7 +66,7 @@ export default function GdcCompliancePage() {
 
                 <p>
                   <strong className="block text-slate-900">Practice type</strong>
-                  [Private Practice]
+                  Private Practice
                 </p>
 
                 <p>
@@ -98,7 +98,7 @@ export default function GdcCompliancePage() {
                   <strong className="block text-slate-900">
                     Complaints contact
                   </strong>
-                  [Practice Manager]
+                  Practice Manager
                 </p>
               </div>
             </section>
