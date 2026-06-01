@@ -11,10 +11,41 @@ export async function POST(req: Request) {
     const email = String(body.email || "").trim();
     const phone = String(body.phone || "").trim();
     const message = String(body.message || "").trim();
+    const captchaToken = String(body.captchaToken || "").trim();
 
     if (!fullName || !email || !message) {
       return NextResponse.json(
         { error: "Please complete the required fields." },
+        { status: 400 }
+      );
+    }
+
+    if (!captchaToken) {
+      return NextResponse.json(
+        { error: "Please complete the security check." },
+        { status: 400 }
+      );
+    }
+
+    const captchaResponse = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET_KEY || "",
+          response: captchaToken,
+        }),
+      }
+    );
+
+    const captchaData = await captchaResponse.json();
+
+    if (!captchaData.success) {
+      return NextResponse.json(
+        { error: "Captcha verification failed. Please try again." },
         { status: 400 }
       );
     }
@@ -49,6 +80,7 @@ ${message}
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
+
     return NextResponse.json(
       { error: "Something went wrong while sending your enquiry." },
       { status: 500 }

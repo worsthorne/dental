@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export function ContactForm() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
   const [loading, setLoading] = useState(false);
+
   const [status, setStatus] = useState<{
     type: "idle" | "success" | "error";
     message: string;
@@ -18,6 +21,15 @@ export function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (!captchaToken) {
+      setStatus({
+        type: "error",
+        message: "Please complete the security check before sending.",
+      });
+      return;
+    }
+
     setLoading(true);
     setStatus({ type: "idle", message: "" });
 
@@ -32,6 +44,7 @@ export function ContactForm() {
           email,
           phone,
           message,
+          captchaToken,
         }),
       });
 
@@ -50,6 +63,7 @@ export function ContactForm() {
       setEmail("");
       setPhone("");
       setMessage("");
+      setCaptchaToken("");
     } catch (error) {
       setStatus({
         type: "error",
@@ -95,6 +109,13 @@ export function ContactForm() {
         className="min-h-[160px] rounded-2xl border border-slate-200 bg-white px-4 py-4 text-sm outline-none"
         placeholder="Tell us how we can help"
         required
+      />
+
+      <Turnstile
+        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+        onSuccess={(token) => setCaptchaToken(token)}
+        onExpire={() => setCaptchaToken("")}
+        onError={() => setCaptchaToken("")}
       />
 
       <button
