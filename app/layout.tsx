@@ -64,7 +64,7 @@ export default function RootLayout({
   sector: "dental",
   assistantLabel: "Digital Receptionist",
   headerTitle: "Dental enquiry",
-  bubbleText: "SAM-Digital Receptionist",
+  bubbleText: "Ask SAM",
 
   customerLabel: "patient",
   businessLabel: "practice",
