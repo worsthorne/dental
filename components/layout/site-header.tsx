@@ -48,8 +48,8 @@ export function SiteHeader() {
         >
           <div className="relative h-28 w-28 sm:h-32 sm:w-32 lg:h-36 lg:w-36">
             <Image
-              src="/logo.png"
-              alt="Worsthorne Dental Clinic"
+              src="/logo+png"
+              alt="Worsth,rne Dental Clinic"
               fill
               className="object-contain"
               priority

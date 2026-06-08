@@ -58,31 +58,31 @@ export function EntryGate() {
           {/* Content */}
           <div className="relative flex min-h-screen items-center justify-center px-5 py-10">
             <div className="mx-auto w-full max-w-5xl text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: -12, scale: 0.92 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-2xl backdrop-blur-md sm:h-28 sm:w-28"
-              >
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Image
-                    src="/logo2.jpeg"
-                    alt="Worsthorne Dental Practice"
-                    width={80}
-                    height={80}
-                    className="h-16 w-16 object-contain sm:h-20 sm:w-20"
-                    priority
-                  />
-                </motion.div>
-              </motion.div>
-
+             <motion.div
+  initial={{ opacity: 0, y: -12, scale: 0.92 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-white/30 bg-white shadow-2xl sm:h-28 sm:w-28"
+>
+  <motion.div
+    animate={{ y: [0, -4, 0] }}
+    transition={{
+      duration: 3.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="flex h-full w-full items-center justify-center rounded-full bg-white"
+  >
+    <Image
+      src="/logo2.jpeg"
+      alt="Worsthorne Dental Practice"
+      width={78}
+      height={78}
+      className="h-20 w-20 object-contain sm:h-24 sm:w-24"
+      priority
+    />
+  </motion.div>
+</motion.div>
               <motion.p
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
